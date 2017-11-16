@@ -15,7 +15,7 @@ class Button:
     x = 0
     y = 0
     
-    def __init___(self,imgUp,imgDown,imgOver,x,y):
+    def __init__(self,imgUp,imgDown,imgOver,x,y):
         self.imgUp = imgUp
         self.imgDown = imgDown
         self.imgOver = imgOver
@@ -79,7 +79,7 @@ class Game:
         #200,72
         buttonUp = buttonSpriteSheet.get_image(0,0,200,72)
         buttonOver = buttonSpriteSheet.get_image(0,72,200,72)
-        buttonBottom = buttonSpriteSheet.get_image(0,144,200,72)
+        buttonDown = buttonSpriteSheet.get_image(0,144,200,72)
         centerX = self.WINDOWWIDTH/2
         centerY = self.WINDOWHEIGHT/2
         buttonRect = buttonUp.get_rect()
@@ -88,7 +88,7 @@ class Game:
         buttonCenterX = centerX/2-buttonWidth/2
         buttonCenterY = centerY/2-buttonHeight/2
         
-        self.startButtton = Button(
+        self.startButton = Button(
             buttonUp,buttonOver,buttonDown,buttonCenterX,buttonCenterY)
         #####Game Loop#####
         while self.playing:
